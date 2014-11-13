@@ -1,0 +1,79 @@
+#custom-options-ph .pull-right {
+    float: right;
+}
+
+#custom-options-ph .pull-left {
+    float: left;
+}
+
+#custom-options-ph .clearfix {
+    clear: both;
+    float: none;
+    margin: 0px;
+    padding: 0px;
+}
+#custom-options-ph .hide {
+    display: none;
+}
+
+#custom-options-ph table.form-table .ctrl {
+    *width: 310px;
+}
+
+#custom-options-ph table.form-table input[type="text"],
+#custom-options-ph table.form-table select,
+#custom-options-ph table.form-table textarea {
+    width: 270px;
+}
+#custom-options-ph table.form-table input[type="checkbox"],
+#custom-options-ph table.form-table input[type="radio"] {
+    width: auto;
+}
+
+#custom-options-ph table.form-table .option_nm {
+    vertical-align: top;
+    font-weight: bold;
+}
+
+#custom-options-ph table.form-table .image-region {
+    position: relative;
+}
+
+#custom-options-ph table.form-table .delete-img {
+    background: url('../imgs/icon_delete.png') no-repeat 0 0;
+    height: 16px;
+    width: 16px;
+    float: right;
+    cursor: pointer;
+    position: absolute;
+    *right: 13px;
+    left: 280px;
+    top: 7px;
+}
+#custom-options-ph table.form-table .delete-icon {
+    background: url('../imgs/icon_delete.png') no-repeat 0 0;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    float: left;
+    margin-left: 7px;
+}
+#custom-options-ph table.form-table .edit-icon {
+    background: url('../imgs/icon_edit.png') no-repeat 0 0;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    float: left;
+    margin-left: 7px;
+}
+
+#custom-options-ph table.form-table .image-region img {
+    width: 290px;
+    margin: 15px 0 0 0;
+}
+
+.general_data_tb tr > td,
+.general_data_tb tr > th,
+.general_data_tb tr > td {
+    padding: 0;
+}

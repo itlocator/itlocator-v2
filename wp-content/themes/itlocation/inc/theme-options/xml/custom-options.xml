@@ -1,0 +1,602 @@
+<?xml version="1.0"?>
+<menu>
+    <id>itlocation</id>
+    <page_title>Theme Options</page_title>
+    <menu_title>Theme Options</menu_title>
+    <content_title>Theme Options</content_title>
+    <help>Options for theme</help>
+    <help_sidebar>Options for theme</help_sidebar>
+    <tab>
+        <id>generals</id>
+        <label>Generals</label>
+        <desc>This is general options</desc>
+        <item>
+            <name>my_profile_page</name>
+            <label>My Profile Page</label>
+            <type>page</type>
+        </item>
+        <item>
+            <name>return_url_after_login</name>
+            <label>Return URL After Login</label>
+            <type>page</type>
+        </item>
+        <item>
+            <name>my_payment_page</name>
+            <label>My Payment Page</label>
+            <type>page</type>
+        </item>
+        <item>
+            <name>signup_page</name>
+            <label>Signup Page</label>
+            <type>page</type>
+        </item>
+        <item>
+            <name>advanced_search_page</name>
+            <label>Advanced Search Page</label>
+            <type>page</type>
+        </item>
+        <item>
+            <name>contributions_list_page</name>
+            <label>Contributions List Page</label>
+            <type>page</type>
+        </item>
+        <item>
+            <name>contributions_edit_page</name>
+            <label>Contributions New &amp; Edit Page</label>
+            <type>page</type>
+        </item>
+        <item>
+            <name>confirm_subscriber_page</name>
+            <label>Confirm subscribe Page</label>
+            <type>page</type>
+        </item>
+        <item>            
+			<name>claim_page</name>
+			<label>Claim Page</label>
+			<type>page</type>
+		</item>
+		<item>            
+			<name>approve_claim</name>
+			<label>Approve Claim Page</label>
+			<type>page</type>
+		</item>
+		<item>            
+			<name>deny_page</name>
+			<label>Deny Claim Page</label>
+			<type>page</type>
+		</item>
+		<item>
+            <name>linked_in_appkey</name>
+            <label>Linkedin AppKey</label>
+            <type>input</type>
+        </item>
+		<item>
+            <name>linked_in_appsecret</name>
+            <label>Linkedin AppSecret</label>
+            <type>input</type>
+        </item>
+		<item>
+            <name>comp_file_size_limit</name>
+            <label>File size limit in company file upload(KByte)</label>
+            <default>1024</default>
+            <desc>default 1024 KByte</desc>
+            <type>input</type>
+        </item>
+        <item>
+            <name>image_the_lastest</name>
+            <label>Image in "The Lastest"</label>
+            <type>file_upload</type>
+        </item>
+        <item>
+            <name>google_analytics_script</name>
+            <label>Google Analytics Script</label>
+            <type>textarea</type>
+        </item>
+        <item>
+            <name>contact_us_phone_number</name>
+            <label>Phone number in Contact us</label>
+            <type>input</type>
+        </item>
+        <item>
+            <name>recaptcha_public_key</name>
+            <label>reCAPTCHA™ Public Key</label>
+            <type>input</type>
+        </item>
+        <item>
+            <name>recaptcha_private_key</name>
+            <label>reCAPTCHA™ Private Key</label>
+            <type>input</type>
+        </item>
+    </tab>
+    <tab>
+        <id>email_settings</id>
+        <label>Email</label>
+        <desc>This is Email Settings</desc>
+        <item>
+            <name>from_email_nm</name>
+            <label>From Email Name</label>
+            <type>input</type>
+            <default>ItLocator Notification</default>
+        </item>
+        <item>
+            <name>from_email_address</name>
+            <label>From Email Address</label>
+            <type>input</type>
+            <default>info@itlocator.com</default>
+        </item>
+        <item>
+            <name>register_user_email_title_for_user</name>
+            <label>Register User Email Title For User</label>
+            <type>input</type>
+            <default>Thanks</default>
+        </item>
+        <item>
+            <name>register_user_email_content_for_user</name>
+            <label>Register User Email Content For User</label>
+            <type>texteditor</type>
+            <default>Congratulations</default>
+            <desc>[#name#] => Name &lt;br/&gt; [#username#] => Username &lt;br/&gt; [#email#] => email &lt;br/&gt; [#password#] => Password</desc>
+        </item>
+        <item>
+            <name>register_user_email_title_for_admin</name>
+            <label>Register User Email Title For Admin</label>
+            <type>input</type>
+            <default>Register New User</default>
+        </item>
+        <item>
+            <name>register_user_email_content_for_admin</name>
+            <label>Register User Email Content For Admin</label>
+            <type>texteditor</type>
+            <default>Register New User</default>
+            <desc>[#name#] => Name &lt;br/&gt; [#username#] => Username &lt;br/&gt; [#email#] => email &lt;br/&gt; [#password#] => Password</desc>
+        </item>
+        <item>
+            <name>subscribe_title</name>
+            <label>Subscribe Email Title</label>
+            <type>input</type>
+            <default>title of subscribe</default>
+        </item>
+        <item>
+            <name>subscribe_email_content</name>
+            <label>Subscribe Email Content</label>
+            <type>texteditor</type>
+            <default>Content of subscribe</default>
+            <desc>[#confirm_url#] => Confirm URL &lt;br/&gt; </desc>
+        </item>
+        <item>
+            <name>reg_user_email_t_for_user_in_admin</name>
+            <label>Register User Email Title For User In Admin</label>
+            <type>input</type>
+            <default>Welcome</default>
+        </item>
+        <item>
+            <name>reg_user_email_c_for_user_in_admin</name>
+            <label>Register User Email Content For User In Admin</label>
+            <type>texteditor</type>
+            <default>You register by Admin</default>
+            <desc>[#name#] => Name &lt;br/&gt; [#username#] => Username &lt;br/&gt; [#email#] => email &lt;br/&gt; [#password#] => Password</desc>
+        </item>
+
+        <item>
+            <name>forgot_pw_email_t_for_user</name>
+            <label>Title of forgot email</label>
+            <type>input</type>
+            <default>Your password</default>
+        </item>
+        <item>
+            <name>forgot_pw_email_c_for_user</name>
+            <label>Contetn of forgot email</label>
+            <type>texteditor</type>
+            <default>Your Password: [#password#]</default>
+            <desc>[#password#] => Password</desc>
+        </item>
+        <item>
+            <name>claim_success_email_content</name>
+            <label>Claim Success Email Content</label>
+            <type>texteditor</type>
+            <default>Congratulations</default>
+            <desc>[#name#] => Name &lt;br/&gt; [#username#] => Username &lt;br/&gt; [#email#] => email &lt;br/&gt; [#password#] => Password &lt;br/&gt; [#company_name#] => Company Name</desc>
+        </item>
+        <item>
+            <name>title_for_contributions</name>
+            <label>Title of Contributions email</label>
+            <type>input</type>
+            <default>Contribution From ItLocator</default>
+        </item>
+        <item>
+            <name>title_for_news</name>
+            <label>Title of News email</label>
+            <type>input</type>
+            <default>News From ItLocator</default>
+        </item>
+    </tab>
+    <tab>
+        <id>newsletter</id>
+        <label>Newsletter</label>
+        <desc>This is Newsletter Settings</desc>
+        <item>
+            <name>contributions</name>
+            <label>Member Contributions</label>
+            <type>check</type>
+            <option_titles>Subscribers,Listings,Members,Platinums</option_titles>
+            <option_values>subscribers,listings,members,platinums</option_values>
+        </item>
+        <item>
+            <name>news</name>
+            <label>Industry News &amp; Trends</label>
+            <type>check</type>
+            <option_titles>Subscribers,Listings,Members,Platinums</option_titles>
+            <option_values>subscribers,listings,members,platinums</option_values>
+        </item>
+    </tab>
+    <tab>
+        <id>ads</id>
+        <label>Ads</label>
+        <desc>This is Ads options</desc>		
+        <item>
+            <name>txt_map_index</name>
+            <label>Index Ad – Map Right</label>
+            <type>textarea</type>
+            <desc>Size: 160px * 600px</desc>
+        </item>
+        <item>
+            <name>txt_1_index</name>
+            <label>Index Ad – Content 1</label>
+            <desc>Size: 300px * 100px</desc>
+            <type>textarea</type>
+        </item>
+        <item>
+            <name>txt_2_index</name>
+            <label>Index Ad – Content 2</label>
+            <desc>Size: 300px * 100px</desc>
+            <type>textarea</type>
+        </item>
+        <item>
+            <name>txt_3_index</name>
+            <label>Index Ad – Content 3</label>
+            <desc>Size: 300px * 100px</desc>
+            <type>textarea</type>
+        </item>
+        <item>
+            <name>author</name>
+            <label>Profile Page Ad</label>
+            <desc>width: 120px</desc>
+            <type>textarea</type>
+        </item>				<item>            <name>txt_right_side</name>            <label>Contribution Page Ad</label>            <type>textarea</type>            <desc>Size: 280px * 280px</desc>        </item>				<item>            <name>txt_last_right_side</name>            <label>Latest Page Ad</label>            <type>textarea</type>            <desc>Size: 280px * 280px</desc>        </item>
+    </tab>
+    <tab>
+        <id>social</id>
+        <label>Social</label>
+        <desc>This is Social options</desc>
+        <item>
+            <name>hupso_like_btns</name>
+            <label>Social Like Buttons in HUPSO.COM</label>
+            <type>textarea</type>
+        </item>
+    </tab>
+    <tab>
+        <id>base_data</id>
+        <label>Base Datas</label>
+        <desc>Please insert base datas</desc>
+        <item>
+            <name>services</name>
+            <label>Company Service</label>
+            <type>general_data</type>
+        </item>
+        <item>
+            <name>certifications</name>
+            <label>Company Certifications</label>
+            <type>general_data</type>
+        </item>
+        <item>
+            <name>partners</name>
+            <label>Company Partner</label>
+            <type>general_data</type>
+        </item>
+        <item>
+            <name>industries</name>
+            <label>Company Industries</label>
+            <type>general_data</type>
+        </item>
+    </tab>
+    <tab>
+        <id>payment_shortcode</id>
+        <label>Payment Shortcode</label>
+        <desc>Please insert payment buttons shortcode</desc>
+        <item>
+            <name>paypal_level_1</name>
+            <label>PayPal® Level 1</label>
+            <type>textarea</type>
+        </item>
+        <item>
+            <name>paypal_level_2</name>
+            <label>PayPal® Level 2</label>
+            <type>textarea</type>
+        </item>
+        <!--
+        <item>
+            <name>alipay_level_1</name>
+            <label>AliPay® Level 1</label>
+            <type>textarea</type>
+        </item>
+        <item>
+            <name>alipay_level_2</name>
+            <label>AliPay® Level 2</label>
+            <type>textarea</type>
+        </item>
+
+        <item>
+            <name>ccbill_level_1</name>
+            <label>ccBill® Level 1</label>
+            <type>textarea</type>
+        </item>
+        <item>
+            <name>ccbill_level_2</name>
+            <label>ccBill® Level 2</label>
+            <type>textarea</type>
+        </item>
+
+        <item>
+            <name>clickbank_level_1</name>
+            <label>ClickBank® Level 1</label>
+            <type>textarea</type>
+        </item>
+        <item>
+            <name>clickbank_level_2</name>
+            <label>ClickBank® Level 2</label>
+            <type>textarea</type>
+        </item>
+
+        <item>
+            <name>google_level_1</name>
+            <label>Google® Level 1</label>
+            <type>textarea</type>
+        </item>
+        <item>
+            <name>google_level_2</name>
+            <label>Google® Level 2</label>
+            <type>textarea</type>
+        </item>
+        -->
+    </tab>
+    <tab>
+        <id>member_limit</id>
+        <label>Member limit</label>
+        <desc>This is Member limit</desc>
+        <item>
+            <name>services_0</name>
+            <label>Services Number for Listing</label>
+            <type>select</type>
+            <default>3</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+        <item>
+            <name>services_1</name>
+            <label>Services Number for Member</label>
+            <type>select</type>
+            <default>10</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+        <item>
+            <name>services_2</name>
+            <label>Services Number for Premium</label>
+            <type>select</type>
+            <default>-1</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+
+        <item>
+            <name>industries_0</name>
+            <label>Industries Number for Listing</label>
+            <type>select</type>
+            <default>3</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+        <item>
+            <name>industries_1</name>
+            <label>Industries Number for Member</label>
+            <type>select</type>
+            <default>5</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+        <item>
+            <name>industries_2</name>
+            <label>Industries Number for Premium</label>
+            <type>select</type>
+            <default>-1</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+
+        <item>
+            <name>certifications_0</name>
+            <label>Certifications Number for Listing</label>
+            <type>select</type>
+            <default>0</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+        <item>
+            <name>certifications_1</name>
+            <label>Certifications Number for Member</label>
+            <type>select</type>
+            <default>3</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+        <item>
+            <name>certifications_2</name>
+            <label>Certifications Number for Premium</label>
+            <type>select</type>
+            <default>-1</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+
+        <item>
+            <name>partners_0</name>
+            <label>Partners Number for Listing</label>
+            <type>select</type>
+            <default>0</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+        <item>
+            <name>partners_1</name>
+            <label>Partners Number for Member</label>
+            <type>select</type>
+            <default>5</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+        <item>
+            <name>partners_2</name>
+            <label>Partners Number for Premium</label>
+            <type>select</type>
+            <default>-1</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+
+        <item>
+            <name>locations_0</name>
+            <label>Locations Number for Listing</label>
+            <type>select</type>
+            <default>1</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+        <item>
+            <name>locations_1</name>
+            <label>Locations Number for Member</label>
+            <type>select</type>
+            <default>3</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+        <item>
+            <name>locations_2</name>
+            <label>Locations Number for Premium</label>
+            <type>select</type>
+            <default>-1</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+
+        <item>
+            <name>collateral_0</name>
+            <label>Collateral Number for Listing</label>
+            <type>select</type>
+            <default>0</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+        <item>
+            <name>collateral_1</name>
+            <label>Collateral Number for Member</label>
+            <type>select</type>
+            <default>3</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+        <item>
+            <name>collateral_2</name>
+            <label>Collateral Number for Premium</label>
+            <type>select</type>
+            <default>-1</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+
+        <item>
+            <name>case_studies_0</name>
+            <label>Case Studies Number for Listing</label>
+            <type>select</type>
+            <default>0</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+        <item>
+            <name>case_studies_1</name>
+            <label>Case Studies Number for Member</label>
+            <type>select</type>
+            <default>1</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+        <item>
+            <name>case_studies_2</name>
+            <label>Case Studies Number for Premium</label>
+            <type>select</type>
+            <default>-1</default>
+            <option_titles>Unlimited,No,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_titles>
+            <option_values>-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16</option_values>
+        </item>
+
+        <item>
+            <name>rating_0</name>
+            <label>Rating for Listing</label>
+            <type>select</type>
+            <default>0</default>
+            <option_titles>No, Yes</option_titles>
+            <option_values>0,1</option_values>
+        </item>
+        <item>
+            <name>rating_1</name>
+            <label>Rating for Member</label>
+            <type>select</type>
+            <default>0</default>
+            <option_titles>No, Yes</option_titles>
+            <option_values>0,1</option_values>
+        </item>
+        <item>
+            <name>rating_2</name>
+            <label>Rating for Premium</label>
+            <type>select</type>
+            <default>1</default>
+            <option_titles>No, Yes</option_titles>
+            <option_values>0,1</option_values>
+        </item>
+
+        <item>
+            <name>contribution_0</name>
+            <label>Contribution Number for Listing</label>
+            <type>select</type>
+            <default>0</default>
+            <option_titles>No, Yes</option_titles>
+            <option_values>0,1</option_values>
+        </item>
+        <item>
+            <name>contribution_1</name>
+            <label>Contribution Number for Member</label>
+            <type>select</type>
+            <default>1</default>
+            <option_titles>No, Yes</option_titles>
+            <option_values>0,1</option_values>
+        </item>
+        <item>
+            <name>contribution_2</name>
+            <label>Contribution Number for Premium</label>
+            <type>select</type>
+            <default>1</default>
+            <option_titles>No, Yes</option_titles>
+            <option_values>0,1</option_values>
+        </item>
+    </tab>
+    <tab>
+        <id>cron_job</id>
+        <label>Cron Job</label>
+        <desc>Information about cron job</desc>
+        <item>
+            <name>secret</name>
+            <label>Secret about Cron Job</label>
+            <type>cron_job</type>
+            <default>123456789</default>
+        </item>
+    </tab>
+</menu>

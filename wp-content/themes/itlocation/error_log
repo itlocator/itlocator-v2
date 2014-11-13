@@ -1,0 +1,10 @@
+[06-Oct-2014 15:39:08 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home/itlocato/public_html/wp-content/themes/itlocation/template-support.php on line 7
+[12-Oct-2014 23:43:04 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home/itlocato/public_html/wp-content/themes/itlocation/search.php on line 9
+[14-Oct-2014 06:53:56 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home/itlocato/public_html/wp-content/themes/itlocation/index.php on line 1
+[14-Oct-2014 06:54:03 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home/itlocato/public_html/wp-content/themes/itlocation/index.php on line 1
+[14-Oct-2014 06:54:57 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home/itlocato/public_html/wp-content/themes/itlocation/index.php on line 1
+[14-Oct-2014 06:55:03 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home/itlocato/public_html/wp-content/themes/itlocation/index.php on line 1
+[16-Oct-2014 22:39:39 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home/itlocato/public_html/wp-content/themes/itlocation/search.php on line 9
+[26-Oct-2014 01:14:14 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home/itlocato/public_html/wp-content/themes/itlocation/template-support.php on line 7
+[26-Oct-2014 08:28:47 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home/itlocato/public_html/wp-content/themes/itlocation/search.php on line 9
+[03-Nov-2014 02:51:37 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home/itlocato/public_html/wp-content/themes/itlocation/search.php on line 9

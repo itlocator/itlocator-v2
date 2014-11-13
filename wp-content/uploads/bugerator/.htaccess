@@ -1,0 +1,6 @@
+	Order Deny,Allow
+	Deny from All
+<Files "export.zip">
+	Order Deny,Allow
+	Allow from All
+</Files>

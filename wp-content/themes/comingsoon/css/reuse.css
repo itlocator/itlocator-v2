@@ -1,0 +1,187 @@
+
+/* REUSABLE STYLES
+--------------------------------------------------------------------------------------- */
+.hidden {display: none !important;}
+.highlighted {color: #211922; background-color: #ff0 !important;}
+.error {font-size: 18px; font-weight: 300; color: #f00 !important;}
+.clear {clear: both !important;}
+
+.noState:hover {background-color: transparent !important;}
+.noState:active {color: #221919 !important;}
+
+/* Floats
+----------------------*/
+.noFloat {float: none !important;}
+.floatRight {float: right !important;}
+.floatLeft {float: left !important;}
+
+.displayB {display: block !important;}
+.displayI {display: inline !important;}
+
+/* None border
+-------------------*/
+.noBorder {border-width: 0 !important;}
+.noBorderTop {border-top-width: 0 !important;}
+.noBorderRight {border-right-width: 0 !important;}
+.noBorderBottom {border-bottom-width: 0 !important;}
+.noBorderLeft {border-left-width: 0 !important;}
+
+/*Margins
+-----------------*/
+.noMargin {margin: 0 !important;}
+.noMarginTop {margin-top: 0 !important;}
+.noMarginRight {margin-right: 0 !important;}
+.noMarginBottom {margin-bottom: 0 !important;}
+.noMarginLeft {margin-left: 0 !important;}
+
+/* Positions 
+------------------------*/
+.fixed {position: fixed !important;}
+.absolute {position: absolute !important;}
+.relative {position: relative !important;}
+
+/* Visibility
+------------------------*/
+.invisible {visibility: hidden !important;}
+
+.noscroll {overflow: hidden !important;}
+.noscroll.extraScroll {margin-right: 15px;} /* Extra space on the right for FireFox */
+
+.clearfix:after {clear: both; display: block; height: 0; content: " "; visibility: hidden;}
+
+/* Background
+-----------------------*/
+.bgImg {background-image:none !important}
+
+/* Image links
+--------------------*/
+.ImgLink {display: block; background-color: #fff;}
+.ImgLink:active {background-color: #221919;}
+.ImgLink img {display: block; margin: 0 auto;}
+.ImgLink:hover img,
+.ImgLink:active img {opacity: .9; filter: alpha(opacity=90);}
+
+/* Color lights
+-------------------*/
+.colorlight,
+.colorlight a {color: #ad9c9c;}
+.colorless,
+.colorless a {color: #8c7e7e;}
+.colormuted,
+.colormuted a {color: #524d4d;}
+
+/* For Linear Gradient
+------------------------------*/
+	.lg {
+	background-color: #2f2f2f;
+	background: -moz-linear-gradient(top,#3b3b3b, #2f2f2f) !important;
+	background: -o-linear-gradient(#3b3b3b, #2f2f2f) !important;
+	background: -webkit-linear-gradient(#3b3b3b, #2f2f2f) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3b3b3b', endColorstr='#2f2f2f') !important;
+	}
+	
+	.lg-black {
+	background-color: #010101;
+	background: -moz-linear-gradient(top,#232324, #010101) !important;
+	background: -o-linear-gradient(#232324, #010101) !important;
+	background: -webkit-linear-gradient(#232324, #010101) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#232324', endColorstr='#010101') !important;
+	}
+	
+	.lg-blue {
+	background-color: #003a69;
+	background: -moz-linear-gradient(top,#008dc2, #003a69) !important;
+	background: -o-linear-gradient(#008dc2, #003a69) !important;
+	background: -webkit-linear-gradient(#008dc2, #003a69) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008dc2', endColorstr='#003a69') !important;
+	}
+	
+	.lg-grey {
+	background-color: #003a69;
+	background: -moz-linear-gradient(top,#a6a6a6, #8a8b8a) !important;
+	background: -o-linear-gradient(#a6a6a6, #8a8b8a) !important;
+	background: -webkit-linear-gradient(#a6a6a6, #8a8b8a) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6a6a6', endColorstr='#8a8b8a') !important;
+	}
+
+/* For Border Radius
+-------------------------------------------*/ 
+.xRound-lr { -webkit-border-radius: 5px 5px 0 0; -moz-border-radius:  5px 5px 0 0; border-radius:  5px 5px 0 0; }
+.xRound { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+.xxRound { -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
+.xxxRound { -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
+
+/* Transparent class
+---------------------------------------*/
+.trans{	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; filter: alpha(opacity=80); -moz-opacity: 0.8; -khtml-opacity: 0.8; opacity: 0.8;}
+
+/* list Styles
+-----------------------------------------------*/
+.normal-list{list-style: inside; }
+.lower-latin-list {list-style: lower-latin; }
+.square-list { list-style: square; }
+.number-list {list-style: decimal; }
+.none-list {	list-style: none; }
+.circle-list {list-style: circle;}
+.italic { font-style:italic;}
+
+/* For Borders
+----------------------------------------*/
+.r{ border:1px solid red !important;}
+.dashed{ border-bottom:1px dashed #CCCCCC !important;}
+.solid{ border-bottom:1px solid #CCCCCC !important;}
+.solid-all{ border:1px solid #CCCCCC !important;}
+
+/* For defauly Margins
+-------------------------------------------*/
+.dM{margin-bottom:10px !important;}
+.dMx{margin-bottom:15px !important;}
+.dMxx{margin-bottom:20px !important;}
+
+/* For default padding 
+-----------------------------------*/
+.noPadding{padding:0 !important}
+.dP{padding:10px 0 !important;}
+.dPx{padding:15px 0 !important;}
+.dPxx{padding:20px 0 !important;}
+
+.dP-lr{padding:0 10px !important;}
+.dPx-lr{padding:0 15px !important;}
+.dPxx-lr{padding:0 20px !important;}
+
+.dP-all-s{padding:5px !important;}
+.dP-all-m{padding:10px !important;}
+.dP-all-l{padding:20px !important;}
+
+/* For default Top margins 
+-----------------------------------------*/
+.tM{margin-top:10px !important;}
+.tMx{margin-top:15px !important;}
+.tMxx{margin-top:20px !important;}
+.tMxxx{margin-top:40px !important;}
+
+.fontNormal{font-family:arial !important;}
+.fontcustom{font-family:arial;}
+
+/* For links
+--------------------------------------*/
+a,a:hover{text-decoration:none;}
+
+/* For Font size Styling
+----------------------------------- */
+.smallF{font-size:11px !important}
+
+/* Box shadow
+----------------------------------- */
+.bSdw{
+ -moz-box-shadow: 0px 0px 4px #c0c0c0;
+  -webkit-box-shadow: 0px 0px 4px #c0c0c0;
+  box-shadow: 0px 0px 4px #c0c0c0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#c0c0c0')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#c0c0c0');
+}
+
+.aCenter{text-align:center !important}
+.aLeft{text-align:left !important}
+.aRight{text-align:right !important}
+

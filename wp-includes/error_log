@@ -1,0 +1,16 @@
+[15-Sep-2014 13:47:10 America/Denver] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/itlocato/public_html/dev/wp-includes/registration-functions.php on line 7
+[01-Oct-2014 12:56:18 America/Denver] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/itlocato/public_html/wp-includes/class-snoopy.php on line 6
+[24-Oct-2014 12:18:20 America/Denver] PHP Fatal error:  Class 'WP_Image_Editor' not found in /home/itlocato/public_html/wp-includes/class-wp-image-editor-gd.php on line 17
+[24-Oct-2014 14:21:14 America/Denver] PHP Fatal error:  Class 'WP_Image_Editor' not found in /home/itlocato/public_html/wp-includes/class-wp-image-editor-gd.php on line 17
+[31-Oct-2014 23:51:35 America/Denver] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/itlocato/public_html/wp-includes/class-snoopy.php on line 6
+[02-Nov-2014 01:23:17 America/Denver] PHP Fatal error:  Class 'WP_Image_Editor' not found in /home/itlocato/public_html/wp-includes/class-wp-image-editor-gd.php on line 17
+[05-Nov-2014 03:11:13 America/Denver] PHP Fatal error:  Class 'WP_Image_Editor' not found in /home/itlocato/public_html/wp-includes/class-wp-image-editor-gd.php on line 17
+[05-Nov-2014 05:29:26 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home/itlocato/public_html/wp-includes/default-widgets.php(1) : eval()'d code on line 1
+[05-Nov-2014 05:29:26 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home/itlocato/public_html/wp-includes/default-widgets.php on line 14
+[06-Nov-2014 09:40:31 America/Denver] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/itlocato/public_html/wp-includes/class-snoopy.php on line 6
+[07-Nov-2014 07:20:21 America/Denver] PHP Parse error:  syntax error, unexpected '=' in /home/itlocato/public_html/wp-includes/default-widgets.php(1) : eval()'d code on line 1
+[07-Nov-2014 07:20:21 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home/itlocato/public_html/wp-includes/default-widgets.php on line 14
+[09-Nov-2014 07:13:56 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home/itlocato/public_html/wp-includes/default-widgets.php on line 14
+[10-Nov-2014 10:52:33 America/Denver] PHP Fatal error:  Class 'WP_Image_Editor' not found in /home/itlocato/public_html/wp-includes/class-wp-image-editor-gd.php on line 17
+[11-Nov-2014 07:01:00 America/Denver] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/itlocato/public_html/wp-includes/class-snoopy.php on line 6
+[11-Nov-2014 16:34:15 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home/itlocato/public_html/wp-includes/default-widgets.php on line 14

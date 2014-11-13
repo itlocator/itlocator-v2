@@ -1,0 +1,203 @@
+LOG ENTRY: Fri Sep 5th, 2014 @ precisely 11:08 am UTC
+PHP v5.4.28 :: WordPress® v3.5.1 :: s2Member® v130816 :: s2Member® Pro v130816
+Memory 21.54 MB :: Real Memory 21.75 MB :: Peak Memory 21.61 MB :: Real Peak Memory 21.75 MB
+dev.itlocator.com/credit-card/
+User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:32.0) Gecko/20100101 Firefox/32.0
+-------- Input vars: ( Fri Sep 5, 2014 11:08:18 am UTC ) --------
+array (
+  'METHOD' => 'SetExpressCheckout',
+  'RETURNURL' => 'http://dev.itlocator.com/credit-card/?s2p-option&s2member_paypal_xco=s2member_pro_paypal_checkout_return',
+  'CANCELURL' => 'http://dev.itlocator.com/credit-card/?s2p-option&s2member_paypal_xco=s2member_pro_paypal_checkout_cancel',
+  'PAGESTYLE' => 'paypal',
+  'LOCALECODE' => '',
+  'NOSHIPPING' => '1',
+  'SOLUTIONTYPE' => 'Sole',
+  'LANDINGPAGE' => 'Billing',
+  'ALLOWNOTE' => '0',
+  'L_BILLINGTYPE0' => 'RecurringPayments',
+  'L_BILLINGAGREEMENTDESCRIPTION0' => 'Please fill you details here',
+  'PAYMENTREQUEST_0_SHIPTONAME' => 'Test AfterTest',
+  'PAYMENTREQUEST_0_SHIPTOSTREET' => '',
+  'PAYMENTREQUEST_0_SHIPTOCITY' => '',
+  'PAYMENTREQUEST_0_SHIPTOSTATE' => '',
+  'PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE' => 'US',
+  'PAYMENTREQUEST_0_SHIPTOZIP' => '',
+  'EMAIL' => 'test20@sol-stice.com',
+  'VERSION' => '71.0',
+  'USER' => 'aw_api1.ascii.com',
+  'PWD' => 'xxxxxxxx/PWD/SIG',
+  'SIGNATURE' => 'xxxxxxxx/PWD/SIG',
+)
+-------- Output string/vars: ( Fri Sep 5, 2014 11:08:19 am UTC ) --------
+TOKEN=EC%2d0W111598PH407223S&TIMESTAMP=2014%2d09%2d05T11%3a08%3a19Z&CORRELATIONID=f3e170459bdf2&ACK=Success&VERSION=71%2e0&BUILD=12658619
+array (
+  'TOKEN' => 'EC-0W111598PH407223S',
+  'TIMESTAMP' => '2014-09-05T11:08:19Z',
+  'CORRELATIONID' => 'f3e170459bdf2',
+  'ACK' => 'Success',
+  'VERSION' => '71.0',
+  'BUILD' => '12658619',
+)
+
+LOG ENTRY: Fri Sep 5th, 2014 @ precisely 11:12 am UTC
+PHP v5.4.28 :: WordPress® v3.5.1 :: s2Member® v130816 :: s2Member® Pro v130816
+Memory 21.55 MB :: Real Memory 21.75 MB :: Peak Memory 21.61 MB :: Real Peak Memory 21.75 MB
+dev.itlocator.com/credit-card/
+User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:32.0) Gecko/20100101 Firefox/32.0
+-------- Input vars: ( Fri Sep 5, 2014 11:12:21 am UTC ) --------
+array (
+  'METHOD' => 'CreateRecurringPaymentsProfile',
+  'EMAIL' => 'test20@sol-stice.com',
+  'FIRSTNAME' => 'Test',
+  'LASTNAME' => 'AfterTest',
+  'SUBSCRIBERNAME' => 'Test AfterTest',
+  'DESC' => 'Please fill you details here',
+  'PROFILEREFERENCE' => '1412550741:0 D:1 M~dev.itlocator.com~1',
+  'INITAMT' => '0.01',
+  'FAILEDINITAMTACTION' => 'CancelOnFailure',
+  'CURRENCYCODE' => 'USD',
+  'AMT' => '0.01',
+  'TAXAMT' => '0.00',
+  'MAXFAILEDPAYMENTS' => '2',
+  'AUTOBILLOUTAMT' => 'AddToNextBilling',
+  'PROFILESTARTDATE' => '2014-10-05T00:00:00Z',
+  'BILLINGPERIOD' => 'Month',
+  'TOTALBILLINGCYCLES' => '0',
+  'BILLINGFREQUENCY' => '1',
+  'CREDITCARDTYPE' => 'MasterCard',
+  'ACCT' => '************4444',
+  'EXPDATE' => '112022',
+  'CVV2' => '5678',
+  'STREET' => 'Ram Mohan Rai Marg',
+  'CITY' => 'Lucknow',
+  'STATE' => 'Uttar Pradesh',
+  'COUNTRYCODE' => 'IN',
+  'ZIP' => '226001',
+  'VERSION' => '71.0',
+  'USER' => 'aw_api1.ascii.com',
+  'PWD' => 'xxxxxxxx/PWD/SIG',
+  'SIGNATURE' => 'xxxxxxxx/PWD/SIG',
+)
+-------- Output string/vars: ( Fri Sep 5, 2014 11:12:21 am UTC ) --------
+TIMESTAMP=2014%2d09%2d05T11%3a12%3a22Z&CORRELATIONID=f0f53a4739dcf&ACK=Failure&VERSION=71%2e0&BUILD=12566246&L_ERRORCODE0=11586&L_SHORTMESSAGE0=DPRP%20is%20disabled%2e&L_LONGMESSAGE0=DPRP%20is%20disabled%20for%20this%20merchant%2e&L_SEVERITYCODE0=Error
+array (
+  'TIMESTAMP' => '2014-09-05T11:12:22Z',
+  'CORRELATIONID' => 'f0f53a4739dcf',
+  'ACK' => 'Failure',
+  'VERSION' => '71.0',
+  'BUILD' => '12566246',
+  'L_ERRORCODE0' => '11586',
+  'L_SHORTMESSAGE0' => 'DPRP is disabled.',
+  'L_LONGMESSAGE0' => 'DPRP is disabled for this merchant.',
+  'L_SEVERITYCODE0' => 'Error',
+  '__error' => 'Error #11586. DPRP is disabled. DPRP is disabled for this merchant.',
+)
+
+LOG ENTRY: Fri Sep 5th, 2014 @ precisely 12:00 pm UTC
+PHP v5.4.28 :: WordPress® v3.5.1 :: s2Member® v130816 :: s2Member® Pro v130816
+Memory 21.55 MB :: Real Memory 21.75 MB :: Peak Memory 21.62 MB :: Real Peak Memory 21.75 MB
+dev.itlocator.com/credit-card/
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36
+-------- Input vars: ( Fri Sep 5, 2014 12:00:56 pm UTC ) --------
+array (
+  'METHOD' => 'CreateRecurringPaymentsProfile',
+  'EMAIL' => 'test20@sol-stice.com',
+  'FIRSTNAME' => 'Test',
+  'LASTNAME' => 'AfterTest',
+  'SUBSCRIBERNAME' => 'Test AfterTest',
+  'DESC' => 'Please fill you details here',
+  'PROFILEREFERENCE' => '1412553656:0 D:1 M~dev.itlocator.com~1',
+  'INITAMT' => '0.01',
+  'FAILEDINITAMTACTION' => 'CancelOnFailure',
+  'CURRENCYCODE' => 'USD',
+  'AMT' => '0.01',
+  'TAXAMT' => '0.00',
+  'MAXFAILEDPAYMENTS' => '2',
+  'AUTOBILLOUTAMT' => 'AddToNextBilling',
+  'PROFILESTARTDATE' => '2014-10-06T00:00:00Z',
+  'BILLINGPERIOD' => 'Month',
+  'TOTALBILLINGCYCLES' => '0',
+  'BILLINGFREQUENCY' => '1',
+  'CREDITCARDTYPE' => 'Visa',
+  'ACCT' => '************1111',
+  'EXPDATE' => '032016',
+  'CVV2' => '333',
+  'STREET' => '#222',
+  'CITY' => 'New Delhi',
+  'STATE' => 'Delhi',
+  'COUNTRYCODE' => 'IN',
+  'ZIP' => '110068',
+  'VERSION' => '71.0',
+  'USER' => 'aw_api1.ascii.com',
+  'PWD' => 'xxxxxxxx/PWD/SIG',
+  'SIGNATURE' => 'xxxxxxxx/PWD/SIG',
+)
+-------- Output string/vars: ( Fri Sep 5, 2014 12:00:58 pm UTC ) --------
+TIMESTAMP=2014%2d09%2d05T12%3a00%3a59Z&CORRELATIONID=441d63b1179c3&ACK=Failure&VERSION=71%2e0&BUILD=12566246&L_ERRORCODE0=11586&L_SHORTMESSAGE0=DPRP%20is%20disabled%2e&L_LONGMESSAGE0=DPRP%20is%20disabled%20for%20this%20merchant%2e&L_SEVERITYCODE0=Error
+array (
+  'TIMESTAMP' => '2014-09-05T12:00:59Z',
+  'CORRELATIONID' => '441d63b1179c3',
+  'ACK' => 'Failure',
+  'VERSION' => '71.0',
+  'BUILD' => '12566246',
+  'L_ERRORCODE0' => '11586',
+  'L_SHORTMESSAGE0' => 'DPRP is disabled.',
+  'L_LONGMESSAGE0' => 'DPRP is disabled for this merchant.',
+  'L_SEVERITYCODE0' => 'Error',
+  '__error' => 'Error #11586. DPRP is disabled. DPRP is disabled for this merchant.',
+)
+
+LOG ENTRY: Fri Sep 5th, 2014 @ precisely 12:06 pm UTC
+PHP v5.4.28 :: WordPress® v3.5.1 :: s2Member® v130816 :: s2Member® Pro v130816
+Memory 21.55 MB :: Real Memory 21.75 MB :: Peak Memory 21.61 MB :: Real Peak Memory 21.75 MB
+dev.itlocator.com/credit-card/
+User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:32.0) Gecko/20100101 Firefox/32.0
+-------- Input vars: ( Fri Sep 5, 2014 12:06:29 pm UTC ) --------
+array (
+  'METHOD' => 'CreateRecurringPaymentsProfile',
+  'EMAIL' => 'test20@sol-stice.com',
+  'FIRSTNAME' => 'Test',
+  'LASTNAME' => 'AfterTest',
+  'SUBSCRIBERNAME' => 'Test AfterTest',
+  'DESC' => 'Please fill you details here',
+  'PROFILEREFERENCE' => '1412553989:0 D:1 M~dev.itlocator.com~1',
+  'INITAMT' => '0.01',
+  'FAILEDINITAMTACTION' => 'CancelOnFailure',
+  'CURRENCYCODE' => 'USD',
+  'AMT' => '0.01',
+  'TAXAMT' => '0.00',
+  'MAXFAILEDPAYMENTS' => '2',
+  'AUTOBILLOUTAMT' => 'AddToNextBilling',
+  'PROFILESTARTDATE' => '2014-10-06T00:00:00Z',
+  'BILLINGPERIOD' => 'Month',
+  'TOTALBILLINGCYCLES' => '0',
+  'BILLINGFREQUENCY' => '1',
+  'CREDITCARDTYPE' => 'MasterCard',
+  'ACCT' => '************4444',
+  'EXPDATE' => '112018',
+  'CVV2' => '3425',
+  'STREET' => 'ram mohan rai marg',
+  'CITY' => 'Lucknow',
+  'STATE' => 'Uttar Pradesh',
+  'COUNTRYCODE' => 'IN',
+  'ZIP' => '226001',
+  'VERSION' => '71.0',
+  'USER' => 'aw_api1.ascii.com',
+  'PWD' => 'xxxxxxxx/PWD/SIG',
+  'SIGNATURE' => 'xxxxxxxx/PWD/SIG',
+)
+-------- Output string/vars: ( Fri Sep 5, 2014 12:06:30 pm UTC ) --------
+TIMESTAMP=2014%2d09%2d05T12%3a06%3a30Z&CORRELATIONID=ff360e8a8ee39&ACK=Failure&VERSION=71%2e0&BUILD=12566246&L_ERRORCODE0=11586&L_SHORTMESSAGE0=DPRP%20is%20disabled%2e&L_LONGMESSAGE0=DPRP%20is%20disabled%20for%20this%20merchant%2e&L_SEVERITYCODE0=Error
+array (
+  'TIMESTAMP' => '2014-09-05T12:06:30Z',
+  'CORRELATIONID' => 'ff360e8a8ee39',
+  'ACK' => 'Failure',
+  'VERSION' => '71.0',
+  'BUILD' => '12566246',
+  'L_ERRORCODE0' => '11586',
+  'L_SHORTMESSAGE0' => 'DPRP is disabled.',
+  'L_LONGMESSAGE0' => 'DPRP is disabled for this merchant.',
+  'L_SEVERITYCODE0' => 'Error',
+  '__error' => 'Error #11586. DPRP is disabled. DPRP is disabled for this merchant.',
+)
+

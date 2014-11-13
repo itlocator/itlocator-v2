@@ -1,0 +1,112 @@
+
+/* All three CSS files above will be loaded from this single document. */
+@import url('reuse.css');
+@import url("http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold");
+
+body{margin:0; padding:0; width:100%; height:auto; background:#f0f0f0 url(../img/map.png) center 100px no-repeat; font-size:12px; font-family: 'PT Sans', sans-serif; color:#333; line-height:18px;}
+
+/*Page settings
+-----------------------------------------------*/
+.contCustom{max-width:1000px;}
+
+/* Absolute bar starts 
+-----------------------------------*/
+.waves{position:absolute; top:0; left:0; z-index:0; text-align:center; width:100%; height:58px; background:url(../img/waves.png) repeat-x}
+.ad{position:fixed; top:0; right:0; z-index:2; width:auto; height:258px;}
+.contactIcon{position:absolute; top:300px; left:0; z-index:9999; text-align:center; width:100px;}
+.contactBtn{width:48px; height:132px; background:url(../img/contact.png) no-repeat; text-indent:-9999px; border:none; float:left}
+
+/* Page title settings
+-----------------------------------------*/
+.pageTitle{font-family:arial;}
+.tUpper{text-transform:uppercase !important;}
+.tLower{text-transform:lowercase !important;}
+.tColorB{color:#222 !important;}
+.tColorW{color:#fff !important;}
+.tSize{font-size:12px !important;}
+.tSizex{font-size:14px !important;}
+
+/* Background */
+.cBWhite{background:#fff !important}
+.cBBlack{background:#222 !important}
+
+div.ribbon{text-align: center; position: relative; color: #fff; margin: 0 -20px 10px -20px; padding: 0 0; text-shadow: 0 1px rgba(0,0,0,.8); }    
+div.ribbon:before, div.ribbon:after { content: ''; position: absolute; border-style: solid; border-color: transparent; bottom: -10px;}
+div.ribbon:before { border-width: 0 10px 10px 0; border-right-color: #131313; left: 0; }
+div.ribbon:after { border-width: 0 0 10px 10px; border-left-color: #131313; right: 0; }
+
+/*---------------*/
+
+
+/*--*/
+.clintData{margin:0px;padding:0px; width:98.2%; display:block; padding-left:20px}
+.clintData li{margin:0px;padding:0px; width:auto; display:inline; margin-right:35px; list-style:none; vertical-align:middle; height:100px}
+.clintData li a{margin:0px;padding:0px; width:auto;  list-style:none; vertical-align:middle;}
+/*--*/
+.reseller{width:600px; padding:15px 20px; background:url(../img/whiteTransparent.png) repeat; float:left; margin-right:15px}
+.linkArrow{width:auto; background:url(../img/whiteTransparent.png) repeat; float:left; margin-right:15px}
+.linkArrow a{background:url(../img/arrow.png) no-repeat center center; width:43px; height:68px; float:left;  padding:20px 25px;}
+.reseller p{font:37px Kozuka Gothic Pro ;color:#f1570b; margin:0px; line-height:81%}
+.reseller span{font:23px Kozuka Gothic Pro ;color:#f1570b}
+
+/*Top area starts
+------------------------------------*/
+.topArea{display:block; border-bottom:0px solid #e4e4e4; padding:10px 0; background:#f0f0f0; height:52px}
+.topArea ul.mainNav{display:block; border:0px solid red; padding:0; margin:0; list-style:none; margin-top:26px}
+.topArea ul.mainNav li {float:left; margin-left:0; overflow:hidden;}
+.topArea ul.mainNav li.active a{background:#00588a; border:none;}
+.topArea ul.mainNav li a{color:#fff; font-weight:bold; font-size:14px; padding:12px 18px}
+.topArea ul.mainNav li a:hover{border:1px solid #00588A; border-bottom:none; background:#00588A; color:#fff;}
+.topArea ul.mainNav li.active a:hover{border:none;}
+
+/* Footer area starts
+----------------------------------------*/
+.footer{display:block; overflow:hidden; border:0px solid red; background:url(../img/footer-bg.png) repeat-x center top; min-height:200px; padding:0}
+.footer ul.footNav li a{color:#f3f3f3;}
+.footer ul.footNav li a:hover{color:#333333;}
+.footer ul.footNav{border-left:1px dotted #f3f3f3; padding-left:10px}
+
+.footerBox span{margin-bottom:10px; font-weight:normal; float:left; color:#f3f3f3}
+.footerInput{width:100%; float:left;}
+.footerInput .text{width:100%; float:left}
+/*footer_area Ends*/
+
+
+.footer.footer-phone{display:block; overflow:hidden; border:0px solid red; padding:2% 2%; min-height:auto}
+.footer.footer-phone p{color:#f3f3f3; font-weight:bold;}
+.footer.footer-phone ul.phn-foooter-link{margin:0;}
+.footer.footer-phone ul.phn-foooter-link li a{font:bold 11px arial; color:#f3f3f3; padding:0; padding-right:5px;  }
+.footer.footer-phone ul.phn-foooter-link li.active a{background:none}
+.footer.footer-phone ul.phn-foooter-link li a:hover{background:none; border:none; text-decoration:underline;}
+
+
+/* Blog page settings
+----------------------------------------------*/
+.pTitle{border-bottom:4px solid #2d2d2d; float:left; width:100%}
+.pTitle span{background:#fff; padding-right:5px; float:left; margin-bottom:-10px; color:#2d2d2d}
+
+.blogHolder{display:block; border:0px solid red; }
+.blogHolder .blogTitle{color:#00689a; margin:0; }
+.blogHolder .caption{padding:0;}
+
+.blogHolder ul.detail{margin:5px 0}
+.blogHolder ul.detail li{padding-left:0; color:#b2b2b2;}
+.blogHolder ul.detail li a{color:#b2b2b2;}
+
+/* */
+ul.timer{}
+ul.timer li h2{font-size:60px; line-height:60%;}
+ul.timer li span{font-size:20px; color:#fff; font-weight:bold; margin-top:5px;}
+
+/* Absolute Ribbon starts
+--------------------------------------*/
+.ribbon-blue{position:absolute; border:0px solid red; right:-7px; top:-8px}
+
+
+/* Absolute Ribbon starts
+--------------------------------------*/
+.ribbon-blue{position:absolute; border:0px solid red; right:-7px; top:-8px}
+
+.widget_wysija label{display:none;}
+.formErrorContent{top:70px; left:-80px}
+.widget_wysija_cont .updated, .widget_wysija_cont .login .message{border:none !important; background:none !important; font-size:16px; color:#fff;}
